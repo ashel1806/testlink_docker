@@ -53,7 +53,7 @@ RUN chmod ug+x ${TL_DIR}/${MODIFY_CONFIG_DB_FILE} && \
     ${TL_DIR}/${MODIFY_CONFIG_DB_FILE}
 
 # Copying script to load the data into the database
-COPY ${LOAD_DATA_FILE} ${TL_DIR}
+COPY ${LOAD_DATA_FILE} ${PRIVILEGES_FILE} ${TL_DIR}
 RUN chmod ug+x ${TL_DIR}/${LOAD_DATA_FILE} && \
     ${TL_DIR}/${LOAD_DATA_FILE}
 

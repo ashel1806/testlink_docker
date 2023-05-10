@@ -24,6 +24,11 @@ $ docker run --name some-mysql \
 
 ```console
 docker run --name some-testlink \
+      -e TL_DB_USER=testlink \
+      -e TL_DB_PASSWD=testlink \
+      -e TL_DB_HOST=localhost \
+      -e TL_DB_NAME=testlink \
+      -e TL_DB_PORT=3306 \
       -p 8080:80 -d \
       asheldkr/testlink:1.9.20
 ```
